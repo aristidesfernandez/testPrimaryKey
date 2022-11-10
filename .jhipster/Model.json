@@ -1,0 +1,24 @@
+{
+  "applications": ["testPrimaryKey"],
+  "changelogDate": "20210927194620",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "model",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Model",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,25 @@
+{
+  "testPrimaryKeyApp": {
+    "commandModel": {
+      "home": {
+        "title": "Command Models",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Command Model",
+        "createOrEditLabel": "Create or edit a Command Model",
+        "notFound": "No Command Models found"
+      },
+      "created": "A new Command Model is created with identifier {{ param }}",
+      "updated": "A Command Model is updated with identifier {{ param }}",
+      "deleted": "A Command Model is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Command Model {{ id }}?"
+      },
+      "detail": {
+        "title": "Command Model"
+      },
+      "id": "ID",
+      "command": "Command",
+      "model": "Model"
+    }
+  }
+}

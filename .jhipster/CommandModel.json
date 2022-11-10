@@ -1,0 +1,26 @@
+{
+  "applications": ["testPrimaryKey"],
+  "changelogDate": "20210927194720",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "command_model",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "CommandModel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "command",
+      "relationshipName": "command",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "model",
+      "relationshipName": "model",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
