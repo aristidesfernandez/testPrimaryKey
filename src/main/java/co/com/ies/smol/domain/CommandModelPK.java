@@ -9,6 +9,13 @@ public class CommandModelPK implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public CommandModelPK(Long commandId, Long modelId) {
+        this.commandId = commandId;
+        this.modelId = modelId;
+    }
+
+    public CommandModelPK() {}
+
     @Column(name = "command_id")
     private Long commandId;
 

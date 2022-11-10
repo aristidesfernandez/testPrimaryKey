@@ -7,7 +7,9 @@ import java.util.List;
  * Service Interface for managing {@link co.com.ies.smol.domain.CommandModel}.
  */
 public interface CommandModelServicePK {
-    CommandModelDTO save(CommandModelDTO commandModelDTO);
+    CommandModelDTO save();
+
+    CommandModelDTO findByModelId(Long modelId);
 
     List<CommandModelDTO> findAll();
 }

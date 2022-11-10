@@ -1,18 +1,12 @@
 package co.com.ies.smol.service.impl;
 
 import co.com.ies.smol.domain.CommandModel;
-import co.com.ies.smol.repository.CommandModelRepository;
+import co.com.ies.smol.domain.CommandModelPK;
+import co.com.ies.smol.domain.CommandToModel;
 import co.com.ies.smol.repository.CommandModelRepositoryPK;
-import co.com.ies.smol.service.CommandModelService;
 import co.com.ies.smol.service.CommandModelServicePK;
 import co.com.ies.smol.service.dto.CommandModelDTO;
-import co.com.ies.smol.service.mapper.CommandModelMapper;
 import java.util.List;
-import java.util.Optional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,7 +24,11 @@ public class CommandModelServicePKImpl implements CommandModelServicePK {
     }
 
     @Override
-    public CommandModelDTO save(CommandModelDTO commandModelDTO) {
+    public CommandModelDTO save() {
+        CommandToModel commandModel = new CommandToModel();
+        CommandModelPK commandModelPK = new CommandModelPK(2L, 2L);
+        commandModel.setId(commandModelPK);
+        commandModelRepository.save(commandModel);
         return null;
     }
 
@@ -38,7 +36,12 @@ public class CommandModelServicePKImpl implements CommandModelServicePK {
     @Transactional(readOnly = true)
     public List<CommandModelDTO> findAll() {
         System.out.println("--------findAll " + commandModelRepository.findAll());
+        return null;
+    }
 
+    @Override
+    public CommandModelDTO findByModelId(Long modelId) {
+        System.out.println("--------findByModelId " + commandModelRepository.findByModelId(1L));
         return null;
     }
 }
